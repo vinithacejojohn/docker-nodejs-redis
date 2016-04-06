@@ -10,7 +10,6 @@ services:
        - ./redis:/opt/node_redisproject
      expose:
         - "3000"
-#     command: node /nodeapp/web/database.js && /bin/bash
      tty: true
 
      links:
@@ -23,7 +22,6 @@ services:
        context: ./docker/
        dockerfile: redisdockerfile
      image: redis1
-    # command: service postgresql start && /bin/bash
      tty: true
      expose:
         - "6379"
